@@ -1,0 +1,321 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  margin: 0;
+  background-image: url('images/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 120%;
+  font-family: 'Overlock SC', cursive;
+}
+
+/* Header/logo Title */
+.header {
+  font-family: 'Lexend Zetta', sans-serif;
+  padding: 80px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+  font-family: 'Lexend Zetta', sans-serif;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  margin-left: 2%;
+  margin-right: 2%;
+  overflow: hidden;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  width: 33%;  
+}
+
+
+
+/* Change color on hover */
+.navbar a:hover {
+   border: 2px solid goldenrod; 
+}
+
+.column {
+  overflow: auto;
+  border: 5px solid goldenrod;
+  border-radius: 25px;
+  margin:1%;
+  float: left;
+  width: 31%;
+  padding: 10px;
+  height: 500px; 
+}
+
+::-webkit-scrollbar {
+  width: 0px; 
+  background: transparent;  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; 
+  flex: 70%;
+  padding: 20px;
+  color: #ddd;
+  text-align: center; 
+}
+
+.column img{
+  box-shadow: 5px;
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+}
+
+.column a{
+  color: #928f8f;
+  text-decoration: none;
+}
+
+.column h4 {
+  font-size: 120%;
+  color: rgb(230, 255, 160);
+  text-align: center;
+  border: 2px dotted burlywood;
+  width: 50%;
+  margin: auto;
+  margin-top: 3.5%;
+}
+
+.column p {
+  margin-bottom: auto;
+  position: relative;
+  color: #ddd;
+  padding-bottom: 30px;
+}
+
+.main h3{
+  color: #ffffff;
+  font-size: 1.5em;
+  text-align: center;
+}
+.main h5{
+  color: #ffffff;
+  font-size: 1.2em;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Footer */
+.footer {
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+
+form{
+  border-radius: 50px;
+  background-image: url('images/wspac.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 10%;
+  padding: 5%;
+  margin-bottom: -10px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+label{
+  padding-left: 1.2%;
+  color: goldenrod;
+  font-size: 1.2em;
+}
+input[type=text], input[type=number], input[type=date] {
+  margin: auto;
+  width: 100%;
+  padding: 15px;
+  margin:  1% 5% 5% 1%;
+  border: 2px solid goldenrod;
+  background: #928f8f;
+  color: #1d1d1d;
+  font-size: 1.1em;
+}
+
+input[type=text]:focus, input[type=number]:focus, input[type=date]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+select{
+  width: 80%;
+  padding: 15px;
+  margin:  1% 5% 5% 1%;
+  display: inline-block;
+  border: 2px solid goldenrod;
+  background: #928f8f;
+  font-size: 1.1em;
+}
+
+#total {
+  font-size: 1.5em;
+}
+
+.subline {
+  padding-left: 1.2%;
+}
+
+.restaurant {
+  height: 30em;
+  margin: 2.5%  ;
+  width: 45%;
+  color: #ddd;
+}
+.room{
+  width: 23%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+
+
+#booking{
+  margin-bottom: -10%;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 769px) {
+  .row {   
+    flex-direction: column;
+  }
+
+  .column {
+    overflow: auto;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    height: 400px;
+  }
+ 
+}
+
+@media screen and (max-width: 450px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+
+  .column {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    overflow: auto;
+    height: 350px;
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #440EBF;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #440EBF;
+  color: white;
+}
+
+
